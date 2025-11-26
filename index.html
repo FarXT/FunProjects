@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Quiz Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    
+
+<div class="container">
+
+    <div class="screen active" id="start-screen">
+      <h1>وقت امتحان </h1>
+      <p>سوالات در 7 گروه قرار داده شدند ,سوالات مورد علاقت رو انتخاب کن </p>
+      
+      <div class="question-bank-select">
+                <div class="question-bank-wrapper">
+                    <label class="question-bank" for="iq">
+                        <input type="radio" id="iq" name="question" value="هوشی"> هوشی
+                    </label>
+                </div>
+
+                <div class="question-bank-wrapper">
+                    <label class="question-bank" for="math">
+                        <input type="radio" id="math" name="question" value="ریاضی"> ریاضی
+                    </label>
+                </div>
+
+                <div class="question-bank-wrapper">
+                    <label class="question-bank" for="eng">
+                        <input type="radio" id="eng" name="question" value="زبان"> زبان
+                    </label>
+                </div>
+
+                <div class="question-bank-wrapper">
+                    <label class="question-bank" for="law">
+                        <input type="radio" id="law" name="question" value="حقوق"> حقوق
+                    </label>
+                </div>
+
+                <div class="question-bank-wrapper">
+                    <label class="question-bank" for="philosophy">
+                        <input type="radio" id="philosophy" name="question" value="فلسفه"> فلسفه
+                    </label>
+                </div>
+
+                <div class="question-bank-wrapper">
+                    <label class="question-bank" for="geo">
+                        <input type="radio" id="geo" name="question" value="جغرافیا"> جغرافیا
+                    </label>
+                </div>
+
+                <div class="question-bank-wrapper">
+                    <label class="question-bank" for="history">
+                        <input type="radio" id="history" name="question" value="تاریخ"> تاریخ
+                    </label>
+                </div>
+
+      </div>
+      
+      <button id="start-btn">شروع آزمون</button>
+    </div>
+    
+    
+    <div class="screen" id="quiz-screen">
+        <div class="quiz-header">
+            <h2 id="question-text"></h2>
+            <div class="quiz-info">
+                <p>سوال <span id="current-question"></span> از <span id="total-questions"></span></p>
+                <p>نمره: <span id="score">0</span> </p>
+            </div>
+        </div>
+
+        <div id="answers-container" class="answers-container">
+            <!-- Answer buttons will be inserted here later at some point with JS -->
+        </div>
+        <div class="progress-bar">
+            <div id="progress" class="progress"></div>
+        </div>
+    </div>
+
+    <div id="result-screen" class="screen">
+        <h1>نتیجه آزمون</h1>
+        <div class="result-info">
+            <p>نمرت  <span id="final-score">0</span> از <span id="max-score">5</span></p>
+            <div id="result-message"></div>
+        </div>
+        <button id="restart-btn">شروع مجدد</button>
+    </div>
+
+    
+</div>
+
+    <script type="module" src="index.js"></script>
+    
+</body>
+</html>
+
+
