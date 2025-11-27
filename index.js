@@ -14,6 +14,7 @@ const maxScoreSpan = document.getElementById("max-score");
 const resultMessage = document.getElementById("result-message");
 const restartButton = document.getElementById("restart-btn");
 const progressBar = document.getElementById("progress");
+const returnButton = document.getElementById("return-btn");
 
 
 
@@ -61,6 +62,7 @@ const checkboxes = document.querySelectorAll(".question-bank input");
 
             if(isChecked){
               currentQuestionBank = questionBanks[id];
+              console.log(currentQuestionBank);
               
             }
 
@@ -84,8 +86,12 @@ startButton.addEventListener("click", function(){
 
 
 restartButton.addEventListener("click", restartQuiz);
+returnButton.addEventListener("click" , () => {
+   
+  quizScreen.classList.remove("active");
+  startScreen.classList.add("active");
 
-
+})
 
 
 
@@ -190,11 +196,10 @@ function showResults() {
 
 function restartQuiz() {
   resultScreen.classList.remove("active");
+  // reload webpage
   window.location.reload();
   startQuiz();
 }
-
-
 
 
 
